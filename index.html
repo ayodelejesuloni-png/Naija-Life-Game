@@ -1,1 +1,50 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#071a33"><title>Naija Life — 3D Life Simulator</title><link rel="stylesheet" href="style.css"></head><body><div class="app"><header class="topbar"><div><div class="brand">🇳🇬 NAIJA LIFE</div><div class="subtitle">3D Nigerian Life Simulator</div></div><div class="top-actions"><button id="saveBtn" class="small-btn">💾 Save</button><button id="resetBtn" class="small-btn danger">↻ Reset</button></div></header><main><section class="hud"><div class="stat"><span>💰 Cash</span><strong id="cash">₦10,000,000</strong></div><div class="stat"><span>⚡ Energy</span><strong id="energy">100%</strong></div><div class="stat"><span>😊 Mood</span><strong id="mood">100%</strong></div><div class="stat"><span>📅 Day</span><strong id="day">1</strong></div><div class="stat"><span>📍 Location</span><strong id="location">Home</strong></div></section><section class="game-shell"><div class="scene-wrap"><div id="message" class="toast">Welcome to Naija Life! You have ₦10M to build your life.</div><div class="scene"><div class="sky"></div><div class="sun"></div><div class="cloud c1"></div><div class="cloud c2"></div><div class="city"><div class="building b1"><span>SHOP</span></div><div class="building b2"><span>BANK</span></div><div class="building b3"><span>OFFICE</span></div><div class="building b4"><span>MALL</span></div></div><div class="road"><div class="lane l1"></div><div class="lane l2"></div></div><div class="tree t1">🌴</div><div class="tree t2">🌴</div><div class="car car1">🚕</div><div class="car car2">🚌</div><div class="player"><div class="head"></div><div class="body"></div><div class="legs"></div></div><div class="label home">🏠 HOME</div><div class="label bank">🏦 BANK</div><div class="label work">💼 WORK</div><div class="label market">🛒 MARKET</div></div></div><aside class="panel"><h2>What will you do?</h2><p class="hint">Choose an action. Time and energy change as you live your Naija story.</p><div class="actions"><button data-action="work">💼 Go to Work <small>+₦250k</small></button><button data-action="business">🛍️ Run Business <small>+₦120k–₦450k</small></button><button data-action="market">🛒 Visit Market <small>−₦20k</small></button><button data-action="transport">🚗 Move Around <small>−₦15k</small></button><button data-action="bank">🏦 Bank <small>Manage money</small></button><button data-action="relax">🎮 Relax <small>+Mood</small></button><button data-action="sleep">😴 Sleep <small>New day</small></button></div><div class="log-box"><h3>📜 Life Log</h3><ul id="log"></ul></div></aside></section><section class="features"><div>🏙️ <b>Explore</b><span>Move around your city</span></div><div>💼 <b>Earn</b><span>Work and build businesses</span></div><div>🏠 <b>Build</b><span>More features coming</span></div><div>⭐ <b>Level Up</b><span>Grow your Naija story</span></div></section></main><footer>Naija Life v0.1 • Built for the browser • Your choices shape your story 🇳🇬</footer></div><script src="game.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071a33"><title>Naija Life — 3D Life Simulator</title><link rel="stylesheet" href="style.css">
+</head>
+<body><div class="app">
+<header class="topbar"><div><div class="brand">🇳🇬 NAIJA LIFE</div><div class="subtitle">3D Nigerian Life Simulator • V0.2</div></div>
+<div class="top-actions"><button id="saveBtn" class="small-btn">💾 Save</button><button id="resetBtn" class="small-btn danger">↻ Reset</button></div></header>
+<main>
+<section class="hud">
+<div class="stat"><span>💰 Cash</span><strong id="cash">₦10,000,000</strong></div>
+<div class="stat"><span>⚡ Energy</span><strong id="energy">100%</strong></div>
+<div class="stat"><span>😊 Mood</span><strong id="mood">100%</strong></div>
+<div class="stat"><span>⭐ Level</span><strong id="level">1</strong></div>
+<div class="stat"><span>📅 Day</span><strong id="day">1</strong></div>
+<div class="stat"><span>📍 Location</span><strong id="location">Home</strong></div>
+</section>
+<section class="game-shell"><div class="scene-wrap">
+<div id="message" class="toast">Welcome to Naija Life! You have ₦10M to build your life.</div>
+<div class="scene">
+<div class="sky"></div><div class="sun"></div><div class="cloud c1"></div><div class="cloud c2"></div>
+<div class="city"><div class="building b1"><span>SHOP</span></div><div class="building b2"><span>BANK</span></div><div class="building b3"><span>OFFICE</span></div><div class="building b4"><span>MALL</span></div></div>
+<div class="road"><div class="lane l1"></div><div class="lane l2"></div></div>
+<div class="tree t1">🌴</div><div class="tree t2">🌴</div><div class="car car1">🚕</div><div class="car car2">🚌</div>
+<div class="player"><div class="head"></div><div class="body"></div><div class="legs"></div></div>
+<div class="label home">🏠 HOME</div><div class="label bank">🏦 BANK</div><div class="label work">💼 WORK</div><div class="label market">🛒 MARKET</div>
+</div></div>
+<aside class="panel"><h2>What will you do?</h2><p class="hint">Build your life, earn XP, complete missions and buy your first property.</p>
+<div class="progress"><div><span>XP</span><b id="xpText">0 / 100</b></div><div class="bar"><i id="xpBar"></i></div></div>
+<div class="actions">
+<button data-action="work">💼 Go to Work <small>+₦250k • +20 XP</small></button>
+<button data-action="business">🛍️ Run Business <small>+₦120k–₦450k • +30 XP</small></button>
+<button data-action="job">🛵 Side Hustle <small>+₦80k • +15 XP</small></button>
+<button data-action="market">🛒 Visit Market <small>−₦20k • +5 XP</small></button>
+<button data-action="transport">🚗 Move Around <small>−₦15k • +5 XP</small></button>
+<button data-action="bank">🏦 Bank <small>Manage money</small></button>
+<button data-action="property">🏠 Property <small>Buy a starter house</small></button>
+<button data-action="inventory">🎒 Inventory <small>View your items</small></button>
+<button data-action="relax">🎮 Relax <small>+Mood +Energy</small></button>
+<button data-action="sleep">😴 Sleep <small>New day</small></button>
+</div>
+<div class="mission-box"><h3>🎯 Current Mission</h3><p id="mission">Earn ₦500,000 from work or business.</p><div class="mission-status" id="missionStatus">0 / ₦500,000</div></div>
+<div class="log-box"><h3>📜 Life Log</h3><ul id="log"></ul></div>
+</aside></section>
+<section class="features">
+<div>🏙️ <b>Explore</b><span>Move around your city</span></div><div>💼 <b>Earn</b><span>Jobs and businesses give XP</span></div>
+<div>🏠 <b>Build</b><span>Buy property and grow wealth</span></div><div>⭐ <b>Level Up</b><span>Unlock bigger opportunities</span></div>
+</section></main><footer>Naija Life v0.2 • Built for the browser • Your choices shape your story 🇳🇬</footer>
+</div><script src="game.js"></script></body></html>
